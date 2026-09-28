@@ -494,8 +494,9 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDrawer();if(e.k
 document.addEventListener('input',e=>{const m={'q-pk':'pk','q-hab':'hab','q-item':'item','q-craft':'craft'}[e.target.id];if(!m)return;S[m].q=e.target.value;if('limit' in S[m])S[m].limit=120;render(true)});
 document.addEventListener('visibilitychange',()=>{if(!document.hidden&&USER)mergeCloud()});
 
-let start=(location.hash||'').slice(1);if(!VIEWS[start]){try{start=sessionStorage.getItem('pk-tab')||'home'}catch(e){start='home'}}
-go(start);
-initSync();
+const authReturn=/access_token=|refresh_token=|error_description=/.test(location.hash);
+let start=authReturn?'':(location.hash||'').slice(1);if(!VIEWS[start]){try{start=sessionStorage.getItem('pk-tab')||'home'}catch(e){start='home'}}
+if(authReturn){S.tab=start;render();initSync().finally(()=>go(start))}
+else{go(start);initSync()}
 })();
 </script>
