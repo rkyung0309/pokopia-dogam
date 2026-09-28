@@ -13,14 +13,15 @@ Nintendo Switch 2 게임 **포켓몬 포코피아**의 개인용 공략 노트�
 | 경로 | 내용 |
 |---|---|
 | `index.html` | 바로 열어 볼 수 있는 완성 페이지 (GitHub Pages용) |
-| `artifact.html` | Claude 아티팩트용 빌드 (계정 동기화·사진 올리기 포함) |
+| `artifact.html` | 단일 HTML 빌드 |
 | `src/template.html` | 페이지 뼈대, 스타일, 화면 로직 |
 | `src/art.js` | 기존 서식지 SVG 생성기(외부 이미지가 없을 때 참고용) |
 | `src/food.js` | 음식·재료 아이콘 SVG |
 | `data/*.txt` | 포켓몬·서식지·아이템·제작·요리 데이터 (`|` 구분) |
 | `build.py` | `python3 build.py` 로 두 HTML을 다시 만듭니다 |
+| `supabase/setup.sql` | 수집 기록 표와 계정별 보안 정책 |
 
-`index.html`을 브라우저에서 열면 수집 체크는 그 브라우저에만 저장됩니다. 계정 동기화와 사진 올리기는 Claude 아티팩트에서만 동작합니다.
+수집 체크는 브라우저에 먼저 저장되고, Supabase 이메일 로그인 후에는 계정별로 클라우드에 자동 동기화됩니다. 로그인할 때 여러 기기 중 가장 최근에 수정한 기록을 사용합니다.
 
 ## 출처와 고지
 
