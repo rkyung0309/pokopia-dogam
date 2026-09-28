@@ -185,6 +185,8 @@ td.src{color:var(--muted);font-size:13px;min-width:16em}
 .piclink{font-size:13px;color:var(--leaf);text-decoration:none;align-self:flex-start}
 .piclink:hover{text-decoration:underline}
 .orb.pic{object-fit:cover;background:var(--surface2);border:2px solid var(--surface)}
+.orb.official{object-fit:contain;background:transparent;border:0;padding:2px}
+.art img{display:block;width:100%;height:100%;object-fit:cover}
 .photobox{display:flex;flex-direction:column;gap:10px}
 .bigpic{width:100%;max-height:340px;object-fit:contain;border-radius:14px;background:var(--surface2)}
 .nopic{height:120px;border-radius:14px;border:1.5px dashed var(--line);display:grid;place-items:center;color:var(--muted);font-size:14px}
@@ -231,7 +233,7 @@ footer{border-top:1px solid var(--line);padding-block:20px;color:var(--muted);fo
 <main class="wrap" id="view"></main>
 
 <footer class="wrap">
-  팬이 정리한 비공식 개인 노트입니다. Pokémon 및 관련 명칭은 Nintendo · Creatures · GAME FREAK의 상표입니다. 수집 체크는 로그인한 계정에 저장되어 휴대폰과 컴퓨터에서 함께 보입니다. 포켓몬 카드의 사진은 직접 올린 사진입니다.
+  팬이 정리한 비공식 개인 노트입니다. Pokémon 및 관련 명칭과 이미지는 각 권리자에게 귀속됩니다. 이미지·데이터 출처: <a href="https://pokopia.gamertw.com/ko" target="_blank" rel="noopener">포코피아 위키 &amp; 가이드</a>. 수집 체크와 직접 올린 사진은 로그인한 계정에 저장됩니다.
 </footer>
 
 <div class="scrim" id="scrim" hidden></div>
@@ -585,9 +587,12 @@ const FOOD=(function(){
 })();
 
 /* ---------- ui helpers ---------- */
-const orb=p=>{if(PHOTOS[p.slug])return `<img class="orb pic" src="/_blob/${PHOTOS[p.slug]}" alt="" loading="lazy">`;const t=p.types.map(x=>TYPES[x]||['?','#888']);const ch=p.name.replace(/\(.*\)/,'').trim()[0];
-  if(t.length>1)return `<span class="orb two" style="--c1:${t[0][1]};--c2:${t[1][1]}" aria-hidden="true">${esc(ch)}</span>`;
-  return `<span class="orb" style="background:${t[0]?t[0][1]:'#888'}" aria-hidden="true">${esc(ch)}</span>`};
+const IMGBASE='https://pokopia.gamertw.com/images';
+const pokemonImage=p=>{if(p.region==='해저')return `${IMGBASE}/pokemon/B-${p.no}-${p.slug}.png`;if(p.region==='이벤트')return `${IMGBASE}/pokemon/E-${p.no}-${p.slug}.png`;return `${IMGBASE}/pokemon/${['professor-tangrowth','shellos-east-sea','gastrodon-east-sea','tatsugiri-curly','tatsugiri-droopy','tatsugiri-stretchy'].includes(p.slug)?`${p.no}-${p.slug}`:p.no}.png`};
+const habitatImage=h=>`${IMGBASE}/habitats/HAB-${String(+h.no+(h.region==='해저'?209:h.region==='이벤트'?245:0)).padStart(3,'0')}.png`;
+const orb=p=>PHOTOS[p.slug]
+  ?`<img class="orb pic" src="/_blob/${PHOTOS[p.slug]}" alt="${esc(p.name)} 내 사진" loading="lazy">`
+  :`<img class="orb official" src="${pokemonImage(p)}" alt="${esc(p.name)}" loading="lazy">`;
 const typeTags=p=>p.types.map(x=>`<span class="tag type" style="background:${(TYPES[x]||['','#888'])[1]}">${(TYPES[x]||[x])[0]}</span>`).join('');
 const spTags=p=>p.sp.map(s=>`<span class="tag sp">${esc(s)}</span>`).join('');
 function chipRow(label,opts,cur,key){return `<div class="chips" role="group" aria-label="${label}"><span class="lbl">${label}</span>${opts.map(([v,t])=>`<button class="chip" data-f="${key}" data-v="${esc(v)}" aria-pressed="${cur===v}">${esc(t)}</button>`).join('')}</div>`}
@@ -659,7 +664,7 @@ function vHabitat(){const f=S.hab,q=f.q.trim();const list=HAB.filter(h=>(!f.regi
   <div class="controls"><input class="search" id="q-hab" type="search" placeholder="서식지, 재료, 포켓몬 이름으로 검색" value="${esc(f.q)}">
   ${chipRow('구역',[['','전체'],['해저','해저'],['본편','본편'],['이벤트','이벤트']],f.region,'hab.region')}</div>
   ${list.length?`<div class="grid">${list.map(h=>{const w=HABPK[h.name]||[];return `<div class="card hab" data-hab="${esc(h.name)}">
-    <div class="art">${ART(h)}</div>
+    <div class="art"><img src="${habitatImage(h)}" alt="${esc(h.name)}" loading="lazy"></div>
     <div class="no">${h.region} #${h.no}</div><h3>${esc(h.name)}</h3>
     <div class="mats">${h.mats.map(m=>{const r=m.match(/^(.*) x(\d+)$/);return r?`<span class="mat">${esc(r[1])}<em>×${r[2]}</em></span>`:`<span class="mat">${esc(m)}</span>`}).join('')}</div>
     <div class="who">${w.length?w.map(p=>`<span class="mini ${GOT.has(p.slug)?'got':''}">${esc(p.name)}</span>`).join(''):'<span class="meta">출현 정보 없음</span>'}</div></div>`}).join('')}</div>`:`<div class="empty">검색 결과가 없어요.</div>`}`}
@@ -721,14 +726,14 @@ function openPk(slug){const p=PK.find(x=>x.slug===slug);if(!p)return;const got=G
   $('#drawer').innerHTML=`<button class="x" data-close>닫기</button>
   <div class="phead">${orb(p)}<div><div class="no">${p.region} No.${p.no}</div><h2>${esc(p.name)}</h2></div></div>
   <button class="bigcatch" data-catch="${p.slug}" aria-pressed="${got}">${got?'✓ 모은 포켓몬':'수집 체크하기'}</button>
-  <div class="photobox">${PHOTOS[p.slug]?`<img class="bigpic" src="/_blob/${PHOTOS[p.slug]}" alt="${esc(p.name)} 내 사진">`:`<div class="nopic">아직 사진이 없어요</div>`}
+  <div class="photobox"><img class="bigpic" src="${PHOTOS[p.slug]?`/_blob/${PHOTOS[p.slug]}`:pokemonImage(p)}" alt="${esc(p.name)}${PHOTOS[p.slug]?' 내 사진':''}">
     <div class="photobtns">${ASSETS?`<label class="upbtn" for="up-${p.slug}">${PHOTOS[p.slug]?'사진 바꾸기':'내 사진 올리기'}</label><input type="file" accept="image/*" id="up-${p.slug}" data-up="${p.slug}" hidden>${PHOTOS[p.slug]?`<button class="rmbtn" data-rmpic="${p.slug}">사진 지우기</button>`:''}`:`<span class="meta">사진 올리기는 Claude에 로그인한 상태에서 이 페이지를 열면 쓸 수 있어요.</span>`}
     <a class="piclink" href="https://pokopia.gamertw.com/ko/pokemon/${p.slug}" target="_blank" rel="noopener">가이드 사이트에서 그림 보기 ↗</a></div>
     <div class="upmsg meta" id="upmsg" aria-live="polite"></div></div>
   <dl class="dl"><dt>타입</dt><dd class="tags">${typeTags(p)}</dd><dt>특기</dt><dd class="tags">${spTags(p)||'—'}</dd>
   <dt>주요 서식지</dt><dd>${esc(p.town)||'—'}</dd><dt>최적 환경</dt><dd>${esc(p.env)||'—'}</dd></dl>
   <div class="box"><h3>좋아하는 환경</h3><div class="tags">${p.favs.length?p.favs.map(i=>`<button class="tag favbtn" data-favgo="${i}">${esc(FAV[i].name)}</button>`).join(''):'<span class="meta">정보 없음</span>'}</div></div>
-  <div class="box"><h3>서식지</h3>${p.habs.length?p.habs.map(h=>{const H=HABBY[h];return `<div style="margin-bottom:12px">${H?`<div class="art sm">${ART(H)}</div>`:''}<b>${esc(h)}</b><div class="meta">${H?esc(H.mats.join(', ')):'재료 정보 없음'}</div></div>`}).join(''):'<span class="meta">특수 조건으로 등장</span>'}</div>
+  <div class="box"><h3>서식지</h3>${p.habs.length?p.habs.map(h=>{const H=HABBY[h];return `<div style="margin-bottom:12px">${H?`<div class="art sm"><img src="${habitatImage(H)}" alt="${esc(H.name)}" loading="lazy"></div>`:''}<b>${esc(h)}</b><div class="meta">${H?esc(H.mats.join(', ')):'재료 정보 없음'}</div></div>`}).join(''):'<span class="meta">특수 조건으로 등장</span>'}</div>
   ${similar.length?`<div class="box"><h3>취향이 비슷한 포켓몬</h3><div class="tags">${similar.map(o=>`<button class="mini" data-pk="${o.slug}">${esc(o.name)}</button>`).join('')}</div></div>`:''}`;
   $('#drawer').hidden=false;$('#scrim').hidden=false;$('#drawer').scrollTop=0;$('#drawer .x').focus()}
 function closeDrawer(){$('#drawer').hidden=true;$('#scrim').hidden=true}

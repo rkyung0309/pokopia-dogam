@@ -3,7 +3,7 @@
 Nintendo Switch 2 게임 **포켓몬 포코피아**의 개인용 공략 노트입니다.
 
 - 포켓몬 365종: 타입·특기·최적 환경·좋아하는 환경·서식지, 수집 체크
-- 서식지 250곳: 필요한 재료, 찾아오는 포켓몬, 재료로 그린 일러스트
+- 서식지 250곳: 필요한 재료, 찾아오는 포켓몬, 원본 가이드 이미지
 - 아이템·제작 레시피 검색
 - 요리: 맛별 효과, 최고 효율 요리, 음식 일러스트
 - 좋아하는 환경 48가지별 포켓몬 모아 보기
@@ -15,7 +15,7 @@ Nintendo Switch 2 게임 **포켓몬 포코피아**의 개인용 공략 노트�
 | `index.html` | 바로 열어 볼 수 있는 완성 페이지 (GitHub Pages용) |
 | `artifact.html` | Claude 아티팩트용 빌드 (계정 동기화·사진 올리기 포함) |
 | `src/template.html` | 페이지 뼈대, 스타일, 화면 로직 |
-| `src/art.js` | 서식지 재료로 장면을 그리는 SVG 생성기 |
+| `src/art.js` | 기존 서식지 SVG 생성기(외부 이미지가 없을 때 참고용) |
 | `src/food.js` | 음식·재료 아이콘 SVG |
 | `data/*.txt` | 포켓몬·서식지·아이템·제작·요리 데이터 (`|` 구분) |
 | `build.py` | `python3 build.py` 로 두 HTML을 다시 만듭니다 |
@@ -24,4 +24,4 @@ Nintendo Switch 2 게임 **포켓몬 포코피아**의 개인용 공략 노트�
 
 ## 출처와 고지
 
-게임 데이터는 팬 사이트 [포코피아 위키 & 가이드](https://pokopia.gamertw.com/ko)를 참고해 정리했습니다. 비공식 팬 노트이며 Nintendo · Creatures · GAME FREAK · The Pokémon Company와 관련이 없습니다. Pokémon 및 관련 명칭은 각 권리자의 상표입니다. 페이지의 그림은 모두 직접 그린 일반 사물 일러스트이며 게임 이미지는 포함하지 않습니다.
+게임 데이터와 포켓몬·서식지 이미지는 팬 사이트 [포코피아 위키 & 가이드](https://pokopia.gamertw.com/ko)를 참고하거나 해당 사이트에서 불러옵니다. 비공식 팬 노트이며 Nintendo · Creatures · GAME FREAK · The Pokémon Company와 관련이 없습니다. Pokémon 및 관련 명칭과 이미지는 각 권리자에게 귀속됩니다.
