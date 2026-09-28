@@ -1,0 +1,480 @@
+<title>나의 포코피아 도감</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+:root{
+  --bg:#F4F7EF; --surface:#FFFFFF; --surface2:#EAF0E2; --ink:#1E2A21; --muted:#5F6E62;
+  --line:#D8E1CF; --leaf:#2F7D4E; --leaf-soft:#DCEFE1; --sun:#E9A21C; --sun-soft:#FBEFD2; --soil:#8A6A4F;
+  --shadow:0 1px 2px rgba(30,42,33,.06),0 6px 18px rgba(30,42,33,.06);
+  --display:"Jua","Noto Sans KR",system-ui,sans-serif;
+  --body:"Noto Sans KR",system-ui,-apple-system,"Apple SD Gothic Neo",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#111713; --surface:#18211B; --surface2:#1F2A23; --ink:#E4ECE2; --muted:#9AAA9C;
+    --line:#2C3A30; --leaf:#6CC08A; --leaf-soft:#1F3A29; --sun:#F2B94A; --sun-soft:#3A2F17; --soil:#C9A27E;
+    --shadow:0 1px 2px rgba(0,0,0,.3);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#111713; --surface:#18211B; --surface2:#1F2A23; --ink:#E4ECE2; --muted:#9AAA9C;
+  --line:#2C3A30; --leaf:#6CC08A; --leaf-soft:#1F3A29; --sun:#F2B94A; --sun-soft:#3A2F17; --soil:#C9A27E;
+  --shadow:0 1px 2px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.55}
+a{color:inherit}
+button,input,select{font:inherit;color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:16px}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:16px;padding-block:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;cursor:pointer;background:none;border:0;padding:0}
+.brand .mark{width:34px;height:34px;border-radius:50% 50% 50% 12%;background:var(--leaf);display:grid;place-items:center;color:#fff;font-family:var(--display);font-size:18px}
+.brand b{font-family:var(--display);font-size:22px;font-weight:400;letter-spacing:.01em}
+.brand small{display:block;font-size:11px;color:var(--muted);letter-spacing:.04em}
+nav.tabs{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;margin-inline:-16px;padding-inline:16px;padding-bottom:10px}
+nav.tabs::-webkit-scrollbar{display:none}
+nav.tabs button{flex:none;border:1px solid transparent;background:none;padding:7px 14px;border-radius:999px;cursor:pointer;color:var(--muted);font-weight:500;white-space:nowrap}
+nav.tabs button:hover{color:var(--ink);background:var(--surface2)}
+nav.tabs button[aria-current="page"]{background:var(--ink);color:var(--bg)}
+button:focus-visible,input:focus-visible,select:focus-visible,.card:focus-visible{outline:2px solid var(--sun);outline-offset:2px}
+main{padding-block:24px 64px}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0;line-height:1.25}
+h1{font-size:clamp(28px,5vw,40px)}
+h2{font-size:24px}
+h3{font-size:18px}
+.lead{color:var(--muted);margin:6px 0 0;max-width:62ch}
+.sechead{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.count{font-family:var(--mono);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+
+/* home */
+.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:20px;align-items:stretch;margin-bottom:28px}
+.hero .intro{padding:28px;border-radius:20px;background:var(--leaf);color:#fff;position:relative;overflow:hidden}
+.hero .intro h1{color:#fff}
+.hero .intro p{opacity:.9;max-width:44ch;margin:10px 0 0}
+.hero .intro::after{content:"";position:absolute;right:-40px;bottom:-60px;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.1);box-shadow:-70px -40px 0 -30px rgba(255,255,255,.08)}
+:root[data-theme="dark"] .hero .intro h1,:root[data-theme="dark"] .hero .intro{color:#0F1A13}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .hero .intro,:root:not([data-theme="light"]) .hero .intro h1{color:#0F1A13}}
+.progress{padding:22px;border-radius:20px;background:var(--surface);border:1px solid var(--line);display:flex;flex-direction:column;gap:14px}
+.progress .big{font-family:var(--display);font-size:44px;line-height:1}
+.progress .big span{font-size:18px;color:var(--muted)}
+.meter{height:10px;border-radius:99px;background:var(--surface2);overflow:hidden}
+.meter i{display:block;height:100%;background:var(--sun);border-radius:99px;transition:width .4s}
+.regionrow{display:grid;grid-template-columns:5em 1fr 4.5em;gap:10px;align-items:center;font-size:13px}
+.regionrow .count{text-align:right}
+.quick{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:32px}
+.qcard{text-align:left;cursor:pointer;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:4px}
+.qcard:hover{border-color:var(--leaf)}
+.qcard .n{font-family:var(--mono);font-size:22px;color:var(--leaf);font-variant-numeric:tabular-nums}
+.qcard .t{font-family:var(--display);font-size:19px}
+.qcard .d{font-size:13px;color:var(--muted)}
+.tips{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.tip{background:var(--sun-soft);border-radius:14px;padding:16px}
+.tip h3{margin-bottom:6px}
+.tip p{margin:0;font-size:14px}
+
+/* controls */
+.controls{display:flex;flex-direction:column;gap:10px;margin-bottom:18px}
+.search{width:100%;padding:11px 14px 11px 40px;border-radius:12px;border:1px solid var(--line);background:var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='none' stroke='%237B8A7D' stroke-width='2'%3E%3Ccircle cx='8' cy='8' r='6'/%3E%3Cpath d='m13 13 4 4'/%3E%3C/svg%3E") no-repeat 13px center}
+.chips{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.chips .lbl{font-size:12px;color:var(--muted);letter-spacing:.05em;margin-right:4px;min-width:4.5em}
+.chip{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:4px 11px;font-size:13px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--leaf);border-color:var(--leaf);color:#fff}
+:root[data-theme="dark"] .chip[aria-pressed="true"]{color:#0F1A13}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .chip[aria-pressed="true"]{color:#0F1A13}}
+details.more summary{cursor:pointer;font-size:13px;color:var(--muted);width:max-content}
+details.more[open] summary{margin-bottom:8px}
+details.more .chips + .chips{margin-top:8px}
+
+/* grids */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:8px;cursor:pointer;text-align:left;position:relative}
+.card:hover{border-color:color-mix(in srgb,var(--leaf) 55%,var(--line));box-shadow:var(--shadow)}
+.card.got{background:linear-gradient(0deg,var(--leaf-soft),var(--leaf-soft)) padding-box}
+.phead{display:flex;gap:12px;align-items:center}
+.orb{flex:none;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-size:20px;color:#fff;position:relative}
+.orb.two{background:conic-gradient(var(--c1) 0 50%,var(--c2) 50% 100%)}
+.no{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.pname{font-weight:700;font-size:16px;line-height:1.3}
+.tags{display:flex;gap:4px;flex-wrap:wrap}
+.tag{font-size:12px;padding:1px 8px;border-radius:6px;background:var(--surface2);color:var(--ink)}
+.tag.type{color:#fff}
+.tag.sp{background:var(--sun-soft)}
+.meta{font-size:13px;color:var(--muted)}
+.meta b{color:var(--ink);font-weight:500}
+.catch{position:absolute;top:10px;right:10px;width:30px;height:30px;border-radius:50%;border:1.5px solid var(--line);background:var(--surface);cursor:pointer;display:grid;place-items:center;font-size:14px;color:transparent}
+.catch[aria-pressed="true"]{background:var(--leaf);border-color:var(--leaf);color:#fff}
+.catch::before{content:"✓"}
+.catch[aria-pressed="false"]::before{color:var(--line)}
+.art{margin:-14px -14px 4px;border-radius:13px 13px 0 0;overflow:hidden;aspect-ratio:200/120;background:#CDEBF7;border-bottom:1px solid var(--line)}
+.art svg{display:block;width:100%;height:100%}
+.art.sm{margin:0 0 6px;border-radius:10px;border:1px solid var(--line)}
+.hab .mats{font-size:13px;color:var(--ink)}
+.hab .who{display:flex;gap:4px;flex-wrap:wrap}
+.mini{font-size:12px;padding:2px 8px;border-radius:99px;border:1px solid var(--line);background:var(--bg)}
+.mini.got{background:var(--leaf-soft);border-color:transparent}
+.empty{padding:40px 16px;text-align:center;color:var(--muted)}
+
+/* tables */
+.tablebox{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:14px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;color:var(--muted);font-weight:500;letter-spacing:.04em;background:var(--surface2);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.name{font-weight:500;white-space:nowrap}
+td.src{color:var(--muted);font-size:13px;min-width:16em}
+.cat{font-size:11px;padding:1px 7px;border-radius:5px;background:var(--surface2);white-space:nowrap}
+.mat{display:inline-block;font-size:12.5px;padding:1px 7px;margin:1px 2px 1px 0;border-radius:6px;background:var(--sun-soft);white-space:nowrap}
+.mat em{font-style:normal;font-family:var(--mono);font-size:11.5px;color:var(--soil);margin-left:3px}
+.morebtn{margin:14px auto 0;display:block;padding:9px 18px;border-radius:999px;border:1px solid var(--line);background:var(--surface);cursor:pointer}
+
+/* recipes */
+.rgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.rcard{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:10px}
+.rcard .top{display:flex;gap:10px;align-items:center}
+.rcard .emo{font-size:26px;line-height:1}
+.flav{font-size:12px;padding:1px 8px;border-radius:99px;border:1px solid var(--line)}
+.boost{font-size:13px}
+.boost b{color:var(--leaf)}
+.eff{font-size:13px;color:var(--muted)}
+.need{font-size:12px;padding:1px 8px;border-radius:6px;background:var(--ink);color:var(--bg)}
+
+.flavors{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
+.fl{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.fl header{padding:12px 16px;background:color-mix(in srgb,var(--fc) 14%,var(--surface));border-bottom:1px solid var(--line)}
+.fl header h3{color:var(--fc);font-size:22px}
+.fl header p{margin:2px 0 0;font-size:13px;font-weight:500}
+.fl .best{display:flex;gap:12px;align-items:center;padding:14px 16px 6px}
+.fl .best b{display:block;font-size:16px;margin:2px 0 6px}
+.lbl2{font-size:11px;letter-spacing:.06em;color:var(--fc);font-weight:700}
+.fl .row{display:flex;gap:6px;flex-wrap:wrap;padding:10px 12px 14px}
+.fl figure{margin:0;width:62px;display:flex;flex-direction:column;align-items:center;gap:3px}
+.fl figcaption{font-size:11px;text-align:center;line-height:1.25;color:var(--muted);word-break:keep-all}
+.fi{display:inline-block;width:46px;height:46px;flex:none}
+.fi svg{width:100%;height:100%;display:block}
+.fi.big{width:76px;height:76px}
+.fi.mid{width:56px;height:56px}
+.formula{display:flex;flex-wrap:wrap;gap:4px;align-items:center}
+.plus{font-weight:700;color:var(--muted);font-size:13px}
+.mat.ing{display:inline-flex;align-items:center;gap:3px;padding:2px 8px 2px 3px}
+.mat.ing svg{width:20px;height:20px}
+/* favorites */
+.fgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.fcard{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;cursor:pointer;text-align:left;display:flex;flex-direction:column;gap:4px}
+.fcard:hover{border-color:var(--leaf)}
+.fcard[aria-pressed="true"]{border-color:var(--leaf);background:var(--leaf-soft)}
+.fcard .t{font-weight:700}
+.fcard .s{font-size:12px;color:var(--muted);font-family:var(--mono)}
+.fdetail{margin-top:18px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px}
+
+/* drawer */
+.scrim{position:fixed;inset:0;background:rgba(10,16,12,.45);z-index:40}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(440px,100%);background:var(--bg);z-index:41;overflow-y:auto;padding:calc(env(safe-area-inset-top,0px) + 20px) 20px calc(env(safe-area-inset-bottom,0px) + 28px);box-shadow:-10px 0 30px rgba(0,0,0,.15);display:flex;flex-direction:column;gap:18px}
+.drawer .x{align-self:flex-end;border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:5px 12px;cursor:pointer}
+.dl{display:grid;grid-template-columns:6.5em 1fr;gap:8px 12px;font-size:14px}
+.dl dt{color:var(--muted)}
+.dl dd{margin:0}
+.sync{font-size:12px;padding:1px 8px;border-radius:99px;background:var(--surface2)}
+.sync[data-s="synced"]{background:var(--leaf-soft);color:var(--leaf)}
+.sync[data-s="error"]{background:var(--sun-soft)}
+.piclink{font-size:13px;color:var(--leaf);text-decoration:none;align-self:flex-start}
+.piclink:hover{text-decoration:underline}
+.orb.pic{object-fit:cover;background:var(--surface2);border:2px solid var(--surface)}
+.photobox{display:flex;flex-direction:column;gap:10px}
+.bigpic{width:100%;max-height:340px;object-fit:contain;border-radius:14px;background:var(--surface2)}
+.nopic{height:120px;border-radius:14px;border:1.5px dashed var(--line);display:grid;place-items:center;color:var(--muted);font-size:14px}
+.photobtns{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.upbtn,.rmbtn{padding:8px 14px;border-radius:10px;border:1px solid var(--line);background:var(--surface);cursor:pointer;font-size:14px}
+.upbtn{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.upbtn:focus-within,.upbtn:hover{outline:2px solid var(--sun);outline-offset:1px}
+.bigcatch{padding:10px 16px;border-radius:12px;border:1px solid var(--leaf);background:var(--surface);cursor:pointer;font-weight:700;color:var(--leaf)}
+.bigcatch[aria-pressed="true"]{background:var(--leaf);color:#fff}
+button.mini,.favbtn{cursor:pointer;font:inherit;font-size:12px}
+.favbtn{border:0}
+.favbtn:hover,button.mini:hover{outline:1px solid var(--leaf)}
+.linkish{background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+.linkish:hover{text-decoration-color:var(--leaf)}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px}
+.box h3{font-size:15px;margin-bottom:6px}
+footer{border-top:1px solid var(--line);padding-block:20px;color:var(--muted);font-size:12px}
+
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr}
+  .quick{grid-template-columns:repeat(2,1fr)}
+  .tips{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <div class="bar">
+      <button class="brand" data-go="home" aria-label="홈으로"><span class="mark">포</span><span><b>나의 포코피아 도감</b><small>POKOPIA · 개인 공략 노트</small></span></button>
+    </div>
+    <nav class="tabs" id="tabs" aria-label="섹션">
+      <button data-go="home">홈</button>
+      <button data-go="pokemon">포켓몬</button>
+      <button data-go="habitat">서식지</button>
+      <button data-go="item">아이템</button>
+      <button data-go="crafting">제작</button>
+      <button data-go="recipe">요리</button>
+      <button data-go="favorite">좋아하는 환경</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="view"></main>
+
+<footer class="wrap">
+  팬이 정리한 비공식 개인 노트입니다. Pokémon 및 관련 명칭은 Nintendo · Creatures · GAME FREAK의 상표입니다. 수집 체크는 로그인한 계정에 저장되어 휴대폰과 컴퓨터에서 함께 보입니다. 포켓몬 카드의 사진은 직접 올린 사진입니다.
+</footer>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" hidden aria-modal="true" role="dialog"></aside>
+
+<script>
+const RAW = /*DATA*/null;
+</script>
+<script>
+(function(){
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+/* ---------- types ---------- */
+const TYPES={normal:['노말','#9A9A82'],fire:['불꽃','#E0612B'],water:['물','#3F83D6'],grass:['풀','#4FA148'],electric:['전기','#D9A800'],ice:['얼음','#4DB6C9'],fighting:['격투','#C0392B'],poison:['독','#9447A8'],ground:['땅','#B98A3E'],flying:['비행','#7E95D8'],psychic:['에스퍼','#E0507F'],bug:['벌레','#8AA11B'],rock:['바위','#A89046'],ghost:['고스트','#6A5496'],dragon:['드래곤','#5865D6'],dark:['악','#5A4A40'],steel:['강철','#6F8A99'],fairy:['페어리','#D77BB8']};
+const ENVS=['밝음','어둠','따뜻함','시원함','촉촉함','건조함'];
+
+/* ---------- parse ---------- */
+const lines=t=>t.split('\n').map(s=>s.trim()).filter(Boolean);
+const FAV=lines(RAW.favorites).map(l=>{const [n,i,p]=l.split('|');return {name:n,items:+i,pk:+p}});
+const DET={};lines(RAW.pokedetail).forEach(l=>{const [s,town,env,f]=l.split('|');DET[s]={town,env,favs:f?f.split(',').map(Number):[]}});
+const PK=[];let region='';
+lines(RAW.pokemon).forEach(l=>{if(l[0]==='#'){region=l.slice(1);return}const [no,name,slug,types,sp,hab]=l.split('|');const d=DET[slug]||{};PK.push({no,name,slug,region,types:types?types.split('/'):[],sp:sp?sp.split('/'):[],habs:hab?hab.split(',').map(s=>s.trim()).filter(Boolean):[],town:d.town||'',env:d.env||'',favs:d.favs||[]})});
+const HAB=[];region='';
+lines(RAW.habitats).forEach(l=>{if(l[0]==='#'){region=l.slice(1);return}const [no,name,mats]=l.split('|');HAB.push({no,name,region,mats:mats.split(',').map(s=>s.trim())})});
+const HABBY={};HAB.forEach(h=>HABBY[h.name]=h);
+const HABPK={};PK.forEach(p=>p.habs.forEach(h=>(HABPK[h]=HABPK[h]||[]).push(p)));
+const CATS={M:'재료',F:'음식',R:'가구',C:'잡화',D:'야외용',Y:'설비',N:'자연',U:'건축',B:'블록',T:'키트',K:'중요 아이템',O:'기타',L:'유실물(대)',S:'유실물(소)',X:'화석'};
+const ITEMS=lines(RAW.items).map(l=>{const [n,c,o]=l.split('|');return {name:n.replace(/^@/,''),group:n[0]==='@',cats:[...c],src:o||''}});
+const MAT={pm:'포켓메탈',fe:'철 주괴',au:'금 주괴',cu:'구리 주괴',fo:'철',wd:'목재',th:'실뭉치',ct:'솜',gl:'유리',st:'돌',pp:'종이',ls:'석회석',br:'벽돌',cc:'콘크리트',vr:'덩굴 끈',sk:'튼튼한 나뭇가지',cl:'흐물흐물 점토',lf:'잎사귀',sl:'작은 통나무',gs:'광채 돌',sg:'바다유리 조각',sp:'반짝반짝 진주',ss:'울퉁별 바위',sh:'조개'};
+const CCATS={R:'가구',C:'잡화',D:'야외용',Y:'설비',U:'건축',B:'블록',O:'기타'};
+const CRAFT=lines(RAW.crafting).map(l=>{const [n,c,m]=l.split('|');return {name:n,cat:c,mats:m.split(',').map(x=>{const r=x.match(/^([a-z]{2})(\d+)$/);if(r)return [MAT[r[1]],+r[2]];const r2=x.match(/^(.*?)(\d+)$/);return r2?[r2[1],+r2[2]]:[x,'']})}});
+const REC=lines(RAW.recipes).map(l=>{const [n,e,k,fl,ing,need,boost,eff]=l.split('|');return {name:n,emo:e,kind:k,flav:fl,ing:ing.split(',').map(s=>s.trim()),need,boost,eff}});
+
+/* ---------- storage ---------- */
+const KEY='pokopia-mine-v1';
+let GOT=new Set();let PHOTOS={};let ASSETS=null;
+try{PHOTOS=JSON.parse(localStorage.getItem(KEY+'-photos')||'{}')}catch(e){}
+try{GOT=new Set(JSON.parse(localStorage.getItem(KEY)||'[]'))}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify([...GOT]))}catch(e){}};
+const body=()=>({caught:[...GOT],photos:PHOTOS,updatedAt:new Date().toISOString()});
+const savePhotos=()=>{try{localStorage.setItem(KEY+'-photos',JSON.stringify(PHOTOS))}catch(e){}};
+let SYNC='local',REF=null,timer=null,writing=false,dirty=false;
+async function flush(){if(!REF||writing){dirty=true;return}writing=true;dirty=false;
+  try{await REF.set(body());SYNC='synced'}catch(e){SYNC='error'}
+  writing=false;paintSync();if(dirty)flush()}
+const toggle=slug=>{GOT.has(slug)?GOT.delete(slug):GOT.add(slug);save();if(REF){SYNC='saving';paintSync();clearTimeout(timer);timer=setTimeout(flush,700)}};
+function syncText(){return {local:'이 기기에만 저장 중',saving:'저장 중…',synced:'모든 기기에 저장됨',error:'저장 실패 · 이 기기에는 남아 있어요'}[SYNC]}
+function paintSync(){const el=document.getElementById('syncstate');if(el){el.textContent=syncText();el.dataset.s=SYNC}}
+async function initSync(){
+  if(!window.claude||!claude.use)return;
+  const [db,user,assets]=await Promise.all([claude.use('db'),claude.use('user'),claude.use('assets')]);ASSETS=assets;
+  if(!db||!user)return;
+  const uid=await user.id();if(!uid)return;
+  REF=db.doc('data/users/'+uid+'/progress');
+  try{const s=await REF.get();
+    if(s.exists){const c=s.data().caught||[];PHOTOS=Object.assign({},PHOTOS,s.data().photos||{});savePhotos();const merged=new Set([...c,...GOT]);const needWrite=merged.size!==c.length;GOT=merged;save();if(needWrite)await REF.set(body())}
+    else if(GOT.size){await REF.set(body())}
+    SYNC='synced';render();
+  }catch(e){SYNC='error';paintSync();return}
+  REF.onSnapshot(s=>{if(!s.exists||s.metadata.hasPendingWrites||writing||timer&&SYNC==='saving')return;const c=s.data().caught||[];const ph=s.data().photos||{};const a=[...GOT].sort().join(),b=[...c].sort().join();const pa=JSON.stringify(PHOTOS),pb=JSON.stringify(ph);if(a!==b||pa!==pb){PHOTOS=Object.assign({},ph);savePhotos();GOT=new Set(c);save();const open=!document.getElementById('drawer').hidden;const cur=open&&document.querySelector('#drawer [data-catch]');render();if(cur)openPk(cur.dataset.catch)}},()=>{SYNC='error';paintSync()});
+}
+
+/*ART*/
+/*FOOD*/
+/* ---------- ui helpers ---------- */
+const orb=p=>{if(PHOTOS[p.slug])return `<img class="orb pic" src="/_blob/${PHOTOS[p.slug]}" alt="" loading="lazy">`;const t=p.types.map(x=>TYPES[x]||['?','#888']);const ch=p.name.replace(/\(.*\)/,'').trim()[0];
+  if(t.length>1)return `<span class="orb two" style="--c1:${t[0][1]};--c2:${t[1][1]}" aria-hidden="true">${esc(ch)}</span>`;
+  return `<span class="orb" style="background:${t[0]?t[0][1]:'#888'}" aria-hidden="true">${esc(ch)}</span>`};
+const typeTags=p=>p.types.map(x=>`<span class="tag type" style="background:${(TYPES[x]||['','#888'])[1]}">${(TYPES[x]||[x])[0]}</span>`).join('');
+const spTags=p=>p.sp.map(s=>`<span class="tag sp">${esc(s)}</span>`).join('');
+function chipRow(label,opts,cur,key){return `<div class="chips" role="group" aria-label="${label}"><span class="lbl">${label}</span>${opts.map(([v,t])=>`<button class="chip" data-f="${key}" data-v="${esc(v)}" aria-pressed="${cur===v}">${esc(t)}</button>`).join('')}</div>`}
+
+/* ---------- state ---------- */
+const S={tab:'home',pk:{q:'',region:'',type:'',sp:'',env:'',got:''},hab:{q:'',region:''},item:{q:'',cat:'',limit:120},craft:{q:'',cat:'',limit:120},rec:{kind:'',flav:''},fav:{sel:-1}};
+
+/* ---------- views ---------- */
+function vHome(){
+  const tot=PK.length,g=PK.filter(p=>GOT.has(p.slug)).length;
+  const regs=['해저','본편','이벤트'].map(r=>{const a=PK.filter(p=>p.region===r);const b=a.filter(p=>GOT.has(p.slug)).length;return `<div class="regionrow"><span>${r}</span><div class="meter"><i style="width:${a.length?b/a.length*100:0}%"></i></div><span class="count">${b}/${a.length}</span></div>`}).join('');
+  const habDone=HAB.filter(h=>(HABPK[h.name]||[]).length&&(HABPK[h.name]).every(p=>GOT.has(p.slug))).length;
+  return `
+  <section class="hero">
+    <div class="intro">
+      <h1>포코피아 도감을<br>내 방식대로.</h1>
+      <p>포켓몬 ${tot}종, 서식지 ${HAB.length}곳, 아이템·제작·요리까지 한 페이지에서 찾고, 만난 포켓몬은 체크해 두세요.</p>
+    </div>
+    <div class="progress">
+      <div class="meta" style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap"><span>나의 수집 현황</span><span id="syncstate" class="sync" data-s="${SYNC}">${syncText()}</span></div>
+      <div class="big">${g}<span> / ${tot}종</span></div>
+      <div class="meter"><i style="width:${g/tot*100}%"></i></div>
+      ${regs}
+      <div class="meta">출현 포켓몬을 모두 모은 서식지 <b>${habDone}</b>곳 · 내 사진 <b>${Object.keys(PHOTOS).length}</b>장</div>
+    </div>
+  </section>
+  <section class="quick">
+    <button class="qcard" data-go="pokemon"><span class="n">${tot}</span><span class="t">포켓몬</span><span class="d">타입·특기·최적 환경으로 찾기</span></button>
+    <button class="qcard" data-go="habitat"><span class="n">${HAB.length}</span><span class="t">서식지</span><span class="d">필요한 재료와 찾아오는 포켓몬</span></button>
+    <button class="qcard" data-go="item"><span class="n">1,468</span><span class="t">아이템</span><span class="d">분류별 획득 방법</span></button>
+    <button class="qcard" data-go="crafting"><span class="n">882</span><span class="t">제작 레시피</span><span class="d">가구부터 블록까지 재료 확인</span></button>
+    <button class="qcard" data-go="recipe"><span class="n">${REC.length}</span><span class="t">요리</span><span class="d">재료, 필요한 특기, 강화되는 기술</span></button>
+    <button class="qcard" data-go="favorite"><span class="n">${FAV.length}</span><span class="t">좋아하는 환경</span><span class="d">취향이 같은 포켓몬 모아 보기</span></button>
+  </section>
+  <section>
+    <div class="sechead"><h2>알아 두면 편한 것</h2></div>
+    <div class="tips">
+      <div class="tip"><h3>서식지는 재료 조합</h3><p>풀 4개처럼 정해진 재료를 가까이 두면 서식지가 완성되고, 그 서식지를 좋아하는 포켓몬이 찾아옵니다. 서식지 탭에서 재료와 출현 포켓몬을 함께 볼 수 있어요.</p></div>
+      <div class="tip"><h3>최적 환경 6가지</h3><p>포켓몬마다 밝음·어둠·따뜻함·시원함·촉촉함·건조함 중 좋아하는 환경이 있습니다. 포켓몬 탭의 필터로 같은 환경을 좋아하는 포켓몬끼리 모아 보세요.</p></div>
+      <div class="tip"><h3>특기가 곧 일손</h3><p>절삭은 목재, 점화는 벽돌, 분쇄는 물감을 만들어 줍니다. 요리 중 일부는 특정 특기를 가진 포켓몬이 있어야 만들 수 있어요.</p></div>
+      <div class="tip"><h3>취향이 겹치면 한 집에</h3><p>좋아하는 환경 탭에서 항목을 고르면 그 취향을 가진 포켓몬이 모두 나옵니다. 같은 가구를 좋아하는 포켓몬끼리 이웃으로 두기 좋아요.</p></div>
+    </div>
+  </section>`}
+
+function pkFiltered(){const f=S.pk,q=f.q.trim();return PK.filter(p=>(!f.region||p.region===f.region)&&(!f.type||p.types.includes(f.type))&&(!f.sp||p.sp.includes(f.sp))&&(!f.env||p.env===f.env)&&(!f.got||(f.got==='y')===GOT.has(p.slug))&&(!q||p.name.includes(q)||p.no.includes(q)||p.habs.some(h=>h.includes(q))||p.sp.some(s=>s.includes(q))))}
+function pkCard(p){const got=GOT.has(p.slug);return `<div class="card ${got?'got':''}" tabindex="0" data-pk="${p.slug}">
+  <button class="catch" data-catch="${p.slug}" aria-pressed="${got}" aria-label="${esc(p.name)} 수집 체크"></button>
+  <div class="phead">${orb(p)}<div><div class="no">${p.region} No.${p.no}</div><div class="pname">${esc(p.name)}</div></div></div>
+  <div class="tags">${typeTags(p)}${spTags(p)}</div>
+  <div class="meta"><b>서식지</b> ${p.habs.length?esc(p.habs.join(', ')):'특수 조건'}</div>
+  ${p.env?`<div class="meta"><b>최적 환경</b> ${p.env}${p.town?` · ${esc(p.town)}`:''}</div>`:''}
+</div>`}
+function vPokemon(){const f=S.pk;const sps=[...new Set(PK.flatMap(p=>p.sp))].sort((a,b)=>a.localeCompare(b,'ko'));const list=pkFiltered();
+  return `<div class="sechead"><div><h1>포켓몬</h1><p class="lead">카드를 누르면 좋아하는 환경과 서식지가 열립니다. 오른쪽 위 동그라미로 수집 체크.</p></div><span class="count">${list.length} / ${PK.length}종</span></div>
+  <div class="controls">
+    <input class="search" id="q-pk" type="search" placeholder="이름, 번호, 서식지, 특기로 검색" value="${esc(f.q)}">
+    ${chipRow('구역',[['','전체'],['해저','해저'],['본편','본편'],['이벤트','이벤트']],f.region,'pk.region')}
+    ${chipRow('수집',[['','전체'],['y','모은 것'],['n','아직']],f.got,'pk.got')}
+    ${chipRow('최적 환경',[['','전체'],...ENVS.map(e=>[e,e])],f.env,'pk.env')}
+    <details class="more" ${f.type||f.sp?'open':''}><summary>타입·특기로 좁히기</summary>
+      ${chipRow('타입',[['','전체'],...Object.entries(TYPES).map(([k,v])=>[k,v[0]])],f.type,'pk.type')}
+      ${chipRow('특기',[['','전체'],...sps.map(s=>[s,s])],f.sp,'pk.sp')}
+    </details>
+  </div>
+  ${list.length?`<div class="grid">${list.map(pkCard).join('')}</div>`:`<div class="empty">조건에 맞는 포켓몬이 없어요. 필터를 하나 풀어 보세요.</div>`}`}
+
+function vHabitat(){const f=S.hab,q=f.q.trim();const list=HAB.filter(h=>(!f.region||h.region===f.region)&&(!q||h.name.includes(q)||h.mats.some(m=>m.includes(q))||(HABPK[h.name]||[]).some(p=>p.name.includes(q))));
+  return `<div class="sechead"><div><h1>서식지</h1><p class="lead">재료를 모아 배치하면 완성됩니다. 초록 칩은 이미 모은 포켓몬이에요.</p></div><span class="count">${list.length} / ${HAB.length}곳</span></div>
+  <div class="controls"><input class="search" id="q-hab" type="search" placeholder="서식지, 재료, 포켓몬 이름으로 검색" value="${esc(f.q)}">
+  ${chipRow('구역',[['','전체'],['해저','해저'],['본편','본편'],['이벤트','이벤트']],f.region,'hab.region')}</div>
+  ${list.length?`<div class="grid">${list.map(h=>{const w=HABPK[h.name]||[];return `<div class="card hab" data-hab="${esc(h.name)}">
+    <div class="art">${ART(h)}</div>
+    <div class="no">${h.region} #${h.no}</div><h3>${esc(h.name)}</h3>
+    <div class="mats">${h.mats.map(m=>{const r=m.match(/^(.*) x(\d+)$/);return r?`<span class="mat">${esc(r[1])}<em>×${r[2]}</em></span>`:`<span class="mat">${esc(m)}</span>`}).join('')}</div>
+    <div class="who">${w.length?w.map(p=>`<span class="mini ${GOT.has(p.slug)?'got':''}">${esc(p.name)}</span>`).join(''):'<span class="meta">출현 정보 없음</span>'}</div></div>`}).join('')}</div>`:`<div class="empty">검색 결과가 없어요.</div>`}`}
+
+function vItem(){const f=S.item,q=f.q.trim();const list=ITEMS.filter(i=>(!f.cat||i.cats.includes(f.cat))&&(!q||i.name.includes(q)||i.src.includes(q)));const shown=list.slice(0,f.limit);
+  return `<div class="sechead"><div><h1>아이템</h1><p class="lead">분류와 획득 방법. 벽지·석판처럼 종류가 많은 것은 한 줄로 묶었습니다.</p></div><span class="count">${list.length}줄</span></div>
+  <div class="controls"><input class="search" id="q-item" type="search" placeholder="아이템 이름이나 획득 장소로 검색 (예: 부유섬, 비퀸)" value="${esc(f.q)}">
+  ${chipRow('분류',[['','전체'],...Object.entries(CATS)],f.cat,'item.cat')}</div>
+  <div class="tablebox"><table><thead><tr><th>이름</th><th>분류</th><th>획득 방법</th></tr></thead><tbody>
+  ${shown.map(i=>`<tr><td class="name">${esc(i.name)}</td><td>${i.cats.map(c=>`<span class="cat">${CATS[c]}</span>`).join(' ')}</td><td class="src">${esc(i.src)||'—'}</td></tr>`).join('')}
+  </tbody></table></div>${list.length>f.limit?`<button class="morebtn" data-more="item">더 보기 (${list.length-f.limit}줄 남음)</button>`:''}`}
+
+function vCraft(){const f=S.craft,q=f.q.trim();const list=CRAFT.filter(c=>(!f.cat||c.cat===f.cat)&&(!q||c.name.includes(q)||c.mats.some(m=>m[0].includes(q))));const shown=list.slice(0,f.limit);
+  return `<div class="sechead"><div><h1>제작</h1><p class="lead">재료 이름으로 검색하면 그 재료가 들어가는 레시피가 나옵니다. 모양만 다른 변형은 묶어서 표시했어요.</p></div><span class="count">${list.length}줄</span></div>
+  <div class="controls"><input class="search" id="q-craft" type="search" placeholder="예: 포켓메탈, 소파, 유리" value="${esc(f.q)}">
+  ${chipRow('분류',[['','전체'],...Object.entries(CCATS)],f.cat,'craft.cat')}</div>
+  <div class="tablebox"><table><thead><tr><th>이름</th><th>분류</th><th>재료</th></tr></thead><tbody>
+  ${shown.map(c=>`<tr><td class="name">${esc(c.name)}</td><td><span class="cat">${CCATS[c.cat]}</span></td><td>${c.mats.map(m=>`<span class="mat">${esc(m[0])}${m[1]!==''?`<em>×${m[1]}</em>`:''}</span>`).join('')}</td></tr>`).join('')}
+  </tbody></table></div>${list.length>f.limit?`<button class="morebtn" data-more="craft">더 보기 (${list.length-f.limit}줄 남음)</button>`:''}`}
+
+const FLAVORS=[
+  {k:'평범한 맛',key:'밋밋한',c:'#B98F14',eff:'포켓몬과 더 친해져요',best:'다채로운 햄버그',formula:['콩','감자','임의의 샐러드'],foods:['맛있는물','플레인 빵','플레인 수프','플레인 샐러드','플레인 햄버그','다채로운 햄버그']},
+  {k:'매운맛',key:'매운',c:'#D9412F',eff:'서식지에 포켓몬이 잘 나타나요',best:'한방 수프',formula:['맛있는물','콩','잎사귀'],foods:['먹음직한 당근','칠리소스','당근 빵','후끈후끈 수프 빵','한방 수프','찌릿찌릿 수프','크루통 샐러드']},
+  {k:'단맛',key:'달콤한',c:'#D6609A',eff:'유실물(고대의 물건)을 잘 찾아요',best:'폭신폭신 빵',formula:['밀','복숭열매','급수 포켓몬'],foods:['복숭열매','콩','튼튼밀크 커피','폭신폭신 빵','과사 샐러드','감자 햄버그']},
+  {k:'신맛',key:'새콤한',c:'#DB8420',eff:'상점에 좋은 물건이 잘 나와요',best:'쥬시 수프',formula:['맛있는물','배리열매','임의의 햄버그'],foods:['배리열매','토마토','미네랄사이다','과사 빵','쥬시 수프','칼질 샐러드','토마토 햄버그']},
+  {k:'떫은맛',key:'떫은',c:'#8456B0',eff:'칠색조·루기아가 잘 나타나요',best:'분쇄 샐러드',formula:['잎사귀','유루열매','분쇄 포켓몬'],foods:['유루열매','먹음직한 버섯','밀','로즈레이티','버섯 수프','분쇄 샐러드','버섯 햄버그']},
+  {k:'쓴맛',key:'쓴',c:'#2F8F74',eff:'희귀 아이템을 잘 발견해요',best:'어른의 햄버그',formula:['콩','복분열매','리샘열매'],foods:['복분열매','감자','해초','리메이크 빵','해초 수프','해초 샐러드','어른의 햄버그']},
+];
+const ficon=(n,cls='fi')=>`<span class="${cls}">${FOOD(n)}</span>`;
+const ingChip=(n,q)=>/포켓몬$/.test(n)?`<span class="need">${esc(n.replace(' 포켓몬',''))} 포켓몬</span>`:`<span class="mat ing">${FOOD(n,false)}${esc(n)}${q?`<em>×${q}</em>`:''}</span>`;
+function vRecipe(){const f=S.rec;const kinds=[...new Set(REC.map(r=>r.kind))];const list=REC.filter(r=>(!f.kind||r.kind===f.kind)&&(!f.flav||r.flav===f.flav));
+  const spk=s=>PK.filter(p=>p.sp.includes(s)).length;
+  const FL=Object.fromEntries(FLAVORS.map(x=>[x.key,x]));
+  return `<div class="sechead"><div><h1>요리</h1><p class="lead">요리를 먹거나 공물로 올리면 맛에 따라 효과가 붙어요. 날재료는 효과가 약하고, 요리할수록 세져요.</p></div></div>
+  <section class="flavors" aria-label="맛별 효과와 최고 효율 요리">
+  ${FLAVORS.map(x=>`<article class="fl" style="--fc:${x.c}">
+    <header><h3>${x.k}</h3><p>${x.eff}</p></header>
+    <div class="best">${ficon(x.best,'fi big')}<div><span class="lbl2">최고 효율</span><b>${esc(x.best)}</b><div class="formula">${x.formula.map(n=>ingChip(n)).join('<span class="plus">+</span>')}</div></div></div>
+    <div class="row">${x.foods.map(n=>`<figure>${ficon(n)}<figcaption>${esc(n)}</figcaption></figure>`).join('')}</div>
+  </article>`).join('')}
+  </section>
+  <div class="sechead" style="margin-top:28px"><h2>전체 요리 레시피</h2><span class="count">${list.length}개</span></div>
+  <div class="controls">${chipRow('종류',[['','전체'],...kinds.map(k=>[k,k])],f.kind,'rec.kind')}${chipRow('맛',[['',"전체"],...FLAVORS.map(x=>[x.key,x.k])],f.flav||'','rec.flav')}</div>
+  <div class="rgrid">${list.map(r=>{const fl=FL[r.flav];return `<div class="rcard"><div class="top">${ficon(r.name,'fi mid')}<div><h3>${esc(r.name)}</h3><div class="tags"><span class="flav">${esc(r.kind)}</span>${fl?`<span class="flav" style="border-color:${fl.c};color:${fl.c}">${fl.k}</span>`:''}${r.need?`<span class="need">${esc(r.need)} 필요 · ${spk(r.need)}종</span>`:''}</div></div></div>
+    <div class="formula">${r.ing.map(i=>{const m=i.match(/^(.*)×(\d+)$/);return m?ingChip(m[1],m[2]):ingChip(i)}).join('')}</div>
+    ${r.boost?`<div class="boost">「<b>${esc(r.boost.replace('(크게)',''))}</b>」 위력 ${r.boost.includes('크게')?'크게 ':''}상승</div>`:''}
+    ${r.eff?`<div class="eff">${esc(r.eff)}</div>`:''}</div>`}).join('')}</div>`}
+
+function vFavorite(){const f=S.fav;const sel=f.sel;
+  let detail='';
+  if(sel>=0){const who=PK.filter(p=>p.favs.includes(sel));detail=`<div class="fdetail" id="favdetail"><div class="sechead"><h2>${esc(FAV[sel].name)}</h2><span class="count">포켓몬 ${who.length}종 · 해당 아이템 ${FAV[sel].items}개</span></div>
+    <div class="who hab" style="display:flex;gap:6px;flex-wrap:wrap">${who.map(p=>`<button class="mini ${GOT.has(p.slug)?'got':''}" data-pk="${p.slug}">${esc(p.name)}</button>`).join('')}</div></div>`}
+  return `<div class="sechead"><div><h1>좋아하는 환경</h1><p class="lead">포켓몬마다 좋아하는 것이 5~6가지 있습니다. 항목을 고르면 그 취향을 가진 포켓몬이 모두 나와요.</p></div><span class="count">${FAV.length}가지</span></div>
+  <div class="fgrid">${FAV.map((x,i)=>`<button class="fcard" data-fav="${i}" aria-pressed="${sel===i}"><span class="t">${esc(x.name)}</span><span class="s">포켓몬 ${PK.filter(p=>p.favs.includes(i)).length} · 아이템 ${x.items}</span></button>`).join('')}</div>${detail}`}
+
+/* ---------- drawer ---------- */
+function openPk(slug){const p=PK.find(x=>x.slug===slug);if(!p)return;const got=GOT.has(slug);
+  const similar=p.favs.length?PK.filter(o=>o!==p&&o.favs.filter(x=>p.favs.includes(x)).length>=3).slice(0,12):[];
+  $('#drawer').innerHTML=`<button class="x" data-close>닫기</button>
+  <div class="phead">${orb(p)}<div><div class="no">${p.region} No.${p.no}</div><h2>${esc(p.name)}</h2></div></div>
+  <button class="bigcatch" data-catch="${p.slug}" aria-pressed="${got}">${got?'✓ 모은 포켓몬':'수집 체크하기'}</button>
+  <div class="photobox">${PHOTOS[p.slug]?`<img class="bigpic" src="/_blob/${PHOTOS[p.slug]}" alt="${esc(p.name)} 내 사진">`:`<div class="nopic">아직 사진이 없어요</div>`}
+    <div class="photobtns">${ASSETS?`<label class="upbtn" for="up-${p.slug}">${PHOTOS[p.slug]?'사진 바꾸기':'내 사진 올리기'}</label><input type="file" accept="image/*" id="up-${p.slug}" data-up="${p.slug}" hidden>${PHOTOS[p.slug]?`<button class="rmbtn" data-rmpic="${p.slug}">사진 지우기</button>`:''}`:`<span class="meta">사진 올리기는 Claude에 로그인한 상태에서 이 페이지를 열면 쓸 수 있어요.</span>`}
+    <a class="piclink" href="https://pokopia.gamertw.com/ko/pokemon/${p.slug}" target="_blank" rel="noopener">가이드 사이트에서 그림 보기 ↗</a></div>
+    <div class="upmsg meta" id="upmsg" aria-live="polite"></div></div>
+  <dl class="dl"><dt>타입</dt><dd class="tags">${typeTags(p)}</dd><dt>특기</dt><dd class="tags">${spTags(p)||'—'}</dd>
+  <dt>주요 서식지</dt><dd>${esc(p.town)||'—'}</dd><dt>최적 환경</dt><dd>${esc(p.env)||'—'}</dd></dl>
+  <div class="box"><h3>좋아하는 환경</h3><div class="tags">${p.favs.length?p.favs.map(i=>`<button class="tag favbtn" data-favgo="${i}">${esc(FAV[i].name)}</button>`).join(''):'<span class="meta">정보 없음</span>'}</div></div>
+  <div class="box"><h3>서식지</h3>${p.habs.length?p.habs.map(h=>{const H=HABBY[h];return `<div style="margin-bottom:12px">${H?`<div class="art sm">${ART(H)}</div>`:''}<b>${esc(h)}</b><div class="meta">${H?esc(H.mats.join(', ')):'재료 정보 없음'}</div></div>`}).join(''):'<span class="meta">특수 조건으로 등장</span>'}</div>
+  ${similar.length?`<div class="box"><h3>취향이 비슷한 포켓몬</h3><div class="tags">${similar.map(o=>`<button class="mini" data-pk="${o.slug}">${esc(o.name)}</button>`).join('')}</div></div>`:''}`;
+  $('#drawer').hidden=false;$('#scrim').hidden=false;$('#drawer').scrollTop=0;$('#drawer .x').focus()}
+function closeDrawer(){$('#drawer').hidden=true;$('#scrim').hidden=true}
+
+/* ---------- render ---------- */
+const VIEWS={home:vHome,pokemon:vPokemon,habitat:vHabitat,item:vItem,crafting:vCraft,recipe:vRecipe,favorite:vFavorite};
+function render(keepFocus){const a=document.activeElement;const id=a&&a.id;const pos=a&&a.selectionStart;
+  $('#view').innerHTML=VIEWS[S.tab]();
+  document.querySelectorAll('#tabs button').forEach(b=>b.setAttribute('aria-current',b.dataset.go===S.tab?'page':'false'));
+  if(keepFocus&&id){const el=document.getElementById(id);if(el){el.focus();try{el.setSelectionRange(pos,pos)}catch(e){}}}}
+function go(tab){if(!VIEWS[tab])tab='home';S.tab=tab;try{history.replaceState(null,'','#'+tab)}catch(e){}render();window.scrollTo({top:0});try{sessionStorage.setItem('pk-tab',tab)}catch(e){}}
+
+document.addEventListener('click',e=>{
+  const rm=e.target.closest('[data-rmpic]');if(rm){const slug=rm.dataset.rmpic;if(!rm.dataset.sure){rm.dataset.sure='1';rm.textContent='한 번 더 누르면 지워져요';return}const old=PHOTOS[slug];delete PHOTOS[slug];persistPhotos().then(async()=>{if(old&&ASSETS){try{await ASSETS.delete(old)}catch(_){}}});render();openPk(slug);return}
+  const t=e.target.closest('[data-go],[data-catch],[data-f],[data-pk],[data-more],[data-fav],[data-favgo],[data-close],#scrim');if(!t)return;
+  if(t.id==='scrim'||t.dataset.close!==undefined){closeDrawer();return}
+  if(t.dataset.go){closeDrawer();go(t.dataset.go);return}
+  if(t.dataset.catch){e.stopPropagation();toggle(t.dataset.catch);const open=!$('#drawer').hidden;render();if(open)openPk(t.dataset.catch);return}
+  if(t.dataset.f){const [g,k]=t.dataset.f.split('.');S[g][k]=t.dataset.v;if('limit' in S[g])S[g].limit=120;render();return}
+  if(t.dataset.more){const g=t.dataset.more==='item'?'item':'craft';S[g].limit+=200;render();return}
+  if(t.dataset.fav!==undefined){const i=+t.dataset.fav;S.fav.sel=S.fav.sel===i?-1:i;render();const d=$('#favdetail');if(d)d.scrollIntoView({behavior:'smooth',block:'nearest'});return}
+  if(t.dataset.favgo!==undefined){closeDrawer();S.fav.sel=+t.dataset.favgo;go('favorite');const d=$('#favdetail');if(d)d.scrollIntoView({block:'start'});return}
+  if(t.dataset.pk){openPk(t.dataset.pk);return}
+});
+async function shrink(file){try{const bmp=await createImageBitmap(file);const k=Math.min(1,1200/Math.max(bmp.width,bmp.height));const c=document.createElement('canvas');c.width=Math.round(bmp.width*k);c.height=Math.round(bmp.height*k);c.getContext('2d').drawImage(bmp,0,0,c.width,c.height);return await new Promise(r=>c.toBlob(b=>r(b||file),'image/jpeg',.85))}catch(e){return file}}
+async function persistPhotos(){savePhotos();if(REF){SYNC='saving';paintSync();clearTimeout(timer);timer=null;await flush()}}
+document.addEventListener('change',async e=>{const slug=e.target.dataset&&e.target.dataset.up;if(!slug||!e.target.files[0]||!ASSETS)return;const msg=document.getElementById('upmsg');msg.textContent='사진 올리는 중…';
+  try{const blob=await shrink(e.target.files[0]);const r=await ASSETS.upload(blob,{type:blob.type||'image/jpeg'});const old=PHOTOS[slug];PHOTOS[slug]=r.id;await persistPhotos();if(old){try{await ASSETS.delete(old)}catch(_){}}render();openPk(slug)}
+  catch(err){msg.textContent=err&&err.code==='too_large'?'사진이 너무 커요. 다른 사진으로 해 볼까요?':'사진을 올리지 못했어요. 잠시 뒤 다시 시도해 주세요.'}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDrawer();if(e.key==='Enter'&&e.target.dataset&&e.target.dataset.pk&&e.target.classList.contains('card'))openPk(e.target.dataset.pk)});
+document.addEventListener('input',e=>{const m={'q-pk':'pk','q-hab':'hab','q-item':'item','q-craft':'craft'}[e.target.id];if(!m)return;S[m].q=e.target.value;if('limit' in S[m])S[m].limit=120;render(true)});
+
+let start=(location.hash||'').slice(1);if(!VIEWS[start]){try{start=sessionStorage.getItem('pk-tab')||'home'}catch(e){start='home'}}
+go(start);
+initSync();
+})();
+</script>

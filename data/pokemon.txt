@@ -1,0 +1,368 @@
+#해저
+001|셀러|shellder|water|연마/어지르기|해저의 산호 풀숲, 모래 속 보물찾기
+002|파르셀|cloyster|ice|연마/어지르기|한들한들 해초 꽃밭
+003|쏘드라|horsea|water|급수|산호 총집합
+004|시드라|seadra|water|급수/어지르기|산호 총집합
+005|킹드라|kingdra|dragon|급수/어지르기|산호 총집합, 바다 화장대
+006|별가사리|staryu|water|순간이동|한들한들 꽃밭
+007|아쿠스타|starmie|psychic|순간이동/분류|말괄량이 인어의 체육관?
+008|리아코|totodile|water|절삭|해저의 풀숲, 카누 선착장, 보글보글 욕조
+009|엘리게이|croconaw|water|절삭/분쇄|굴뚝 근처에서 땅파기, 카누 선착장
+010|장크로다일|feraligatr|water|절삭/분쇄|해저의 풀숲, 물어뜯는 샌드백
+011|초라기|chinchou|electric|발전|폭신폭신 릴랙스 스페이스
+012|랜턴|lanturn|electric|발전/급수|추억의 공간
+013|코산호|corsola|rock|재배|해저의 산호 풀숲, 산호 총집합
+014|물짱이|mudkip|water|급수|해저의 풀숲, 폭신폭신 릴랙스 스페이스
+015|늪짱이|marshtomp|ground|급수/건축|기이한 굴뚝, 즐거운 진흙놀이
+016|대짱이|swampert|ground|건축/땅고르기|해저의 산호 풀숲, 진흙 스파
+017|샤프니아|carvanha|dark|절삭|네트와 해초
+018|샤크니아|sharpedo|dark|절삭/연마|굴뚝 근처에서 땅파기
+019|미꾸리|barboach|ground|탐색|모래 산 곁에서 연설 대회, 바다의 연회석, 즐거운 진흙놀이
+020|메깅|whiscash|ground|탐색/땅고르기|기품 넘치는 침상
+021|가재군|corphish|water|건축|모래가 가득한 해저의 풀숲, 모래 속 보물찾기
+022|가재장군|crawdaunt|dark|건축/분쇄|모래 속 보물찾기
+023|사랑동이|luvdisc|water|분위기 메이킹|한들한들 산호 꽃밭, 보물상자와 반짝이는 보석, 폭신폭신 릴랙스 스페이스
+024|브이젤|buizel|water|절삭/거래|해저의 풀숲, 스무디 개시
+025|플로젤|floatzel|water|거래/건축|바다 상점
+026|형광어|finneon|water|분위기 메이킹|한들한들 꽃밭, 바다 이끼투성이
+027|네오라이트|lumineon|water|분위기 메이킹/급수|한들한들 해초 꽃밭, 바다 이끼투성이
+028|탱그릴(수컷)|frillish-male|ghost|탐색/점화|대항해 놀이, 바다의 보물
+028|탱그릴(암컷)|frillish-female|ghost|탐색/점화|대항해 놀이, 바다의 보물
+029|탱탱겔(수컷)|jellicent-male|ghost|탐색/점화|바다 티타임
+029|탱탱겔(암컷)|jellicent-female|ghost|탐색/점화|바다 티타임
+030|맘복치|alomomola|water|급수/연마|바다의 보물
+031|메더|stunfisk|electric|발전/땅고르기|한들한들 꽃밭, 네트와 해초
+032|오케이징|inkay|psychic|분류/순간이동|즐거운 진흙놀이
+033|칼라마네로|malamar|psychic|분류/순간이동|설마 거꾸로?
+034|누리공|popplio|water|분위기 메이킹/급수|한들한들 꽃밭
+035|키요공|brionne|water|분위기 메이킹/거래|
+036|누리레느|primarina|fairy|분위기 메이킹/연마|우아한 콘서트
+037|시마사리|mareanie|water|리사이클|한들한들 산호 꽃밭
+038|더시마사리|toxapex|water|리사이클/건축|보물상자와 반짝이는 보석
+039|꼬시레|wimpod|water|리사이클|버려진 보물?
+040|갑주무사|golisopod|water|리사이클/절삭|한들한들 산호 꽃밭, 버려진 보물?
+041|치갈기|bruxish|psychic|분류/순간이동|이글이글 이끼투성이
+042|타타륜|dhelmise|grass|재배/어지르기|대항해 놀이
+043|깨물부기|chewtle|water|절삭|스무디 개시
+044|갈가부기|drednaw|rock|절삭/땅고르기|카누 선착장
+045|찌르성게|pincurchin|electric|발전|기이한 굴뚝
+046|바다그다|wiglett|water|땅고르기|모래 산 곁에서 연설 대회
+047|바닥트리오|wugtrio|water|땅고르기/탐색|반짝반짝 트리오 스테이지
+048|가비루사|veluza|psychic|분류/순간이동|바다 이끼투성이
+049|피오네|phione|water|거래|
+050|마나피|manaphy|water|거래/분위기 메이킹|
+#본편
+001|이상해씨|bulbasaur|grass/poison|재배|초록 풀숲, 초록 벤치
+002|이상해풀|ivysaur|grass/poison|재배|꽃이 가득한 풍경, 초록 벤치
+003|이상해꽃|venusaur|grass/poison|재배/어지르기|꽃이 가득한 풍경, 정원 테라스
+004|파이리|charmander|fire|점화|초록 풀숲
+005|리자드|charmeleon|fire|점화|캠핑 세트
+006|리자몽|charizard|fire/flying|점화/공중날기|초록 풀숲, 나무열매 축제 캠프
+007|꼬부기|squirtle|water|급수|초록 풀숲, 촉촉한 풀숲
+008|어니부기|wartortle|water|급수|촉촉한 풀숲
+009|거북왕|blastoise|water|급수/거래|촉촉한 풀숲, 그늘에서 물놀이
+010|구구|pidgey|normal/flying|공중날기/탐색|고지대의 풀숲, 예쁜 꽃밭
+011|피죤|pidgeotto|normal/flying|공중날기/탐색|고지대의 풀숲, 예쁜 꽃밭
+012|피죤투|pidgeot|normal/flying|공중날기/절삭|호화로운 짹짹 푸드
+013|뚜벅쵸|oddish|grass/poison|재배|초록 풀숲
+014|냄새꼬|gloom|grass/poison|재배|트로피컬 느낌
+015|라플레시아|vileplume|grass/poison|재배/어지르기|럭키 휴식처
+016|아르코|bellossom|grass|재배/분위기 메이킹|럭키 휴식처
+017|파라스|paras|bug/grass|탐색|고지대의 꽃밭, 플라워 가든
+018|파라섹트|parasect|bug/grass|탐색|고지대의 꽃밭, 플라워 가든
+019|콘팡|venonat|bug/poison|탐색|빛이 비치는 풀숲, 빛이 비치는 벤치
+020|도나리|venomoth|bug/poison|탐색|빛이 비치는 풀숲, 빛이 비치는 벤치
+021|모다피|bellsprout|grass/poison|재배/어지르기|나무 그늘의 풀숲
+022|우츠동|weepinbell|grass/poison|재배/어지르기|화사한 테이블, 불빛과 향기의 유혹
+023|우츠보트|victreebel|grass/poison|재배/절삭|화사한 테이블, 불빛과 향기의 유혹
+024|야돈|slowpoke|water/psychic|급수/하품|파도치는 풀숲
+025|야도란|slowbro|water/psychic|급수/거래|파도치는 풀숲, 인형과 꿈나라로
+026|야도킹|slowking|water/psychic|급수/순간이동|파도치는 풀숲, 인형과 꿈나라로, 낚시터
+027|코일|magnemite|electric/steel|발전|공장의 보관소
+028|레어코일|magneton|electric/steel|발전|수많은 쓰레기통, 미니 게임코너
+029|자포코일|magnezone|electric/steel|발전/리사이클|수많은 쓰레기통, 미니 게임코너
+030|롱스톤|onix|rock/ground|분쇄/땅고르기|보송보송한 풀숲
+031|강철톤|steelix|steel/ground|분쇄/땅고르기|덜컹덜컹 철골 공사
+032|탕구리|cubone|ground|건축|꽃밭 속의 무덤
+033|텅구리|marowak|ground|건축|꽃밭 속의 무덤
+034|배루키|tyrogue|fighting|거래|수행의 폭포
+035|시라소몬|hitmonlee|fighting|거래|응급 처치소
+036|홍수몬|hitmonchan|fighting|거래|체육관의 휴식처
+037|카포에라|hitmontop|fighting|거래|체육관 응급 처치소
+038|또가스|koffing|poison|리사이클|쓰레기 집적소
+039|또도가스|weezing|poison|리사이클|예스러운 멋의 앤티크, 쓰레기 집적소
+040|덩쿠리|tangela|grass|재배/어지르기|몬스터볼투성이
+041|덩쿠림보|tangrowth|grass|재배/어지르기|초록 벤치
+041|덩쿠림보 박사|professor-tangrowth|grass|감정|박사의 보물
+042|스라크|scyther|bug/flying|절삭|나무 그늘의 풀숲
+043|핫삼|scizor|bug/steel|절삭|나무 그늘의 풀숲
+044|쁘사이저|pinsir|bug|절삭/건축|나무 그늘의 풀숲
+045|잉어킹|magikarp|water||바다낚시
+046|갸라도스|gyarados|water/flying|급수|빛나는 폭포
+047|메타몽|ditto|normal|변신|
+048|부우부|hoothoot|normal/flying|거래/공중날기|고지대의 풀숲, 예쁜 꽃밭, 은은한 빛과 꿈나라로
+049|야부엉|noctowl|normal/flying|거래/공중날기|고지대의 풀숲, 은은한 빛과 꿈나라로
+050|헤라크로스|heracross|bug/fighting|절삭/건축|나무 그늘의 풀숲
+051|볼비트|volbeat|bug|분위기 메이킹|촉촉한 꽃밭
+052|네오비트|illumise|bug|분위기 메이킹|촉촉한 꽃밭
+053|꼴깍몬|gulpin|poison|수납|꼬르륵 다이닝
+054|꿀꺽몬|swalot|poison|수납|두근두근 식탁
+055|선인왕|cacnea|grass|재배|쾌청 스폿
+056|밤선인|cacturne|grass/dark|재배/어지르기|나무 그늘의 꽃밭
+057|세꿀버리|combee|bug/flying|어지르기|예쁜 꽃밭
+058|비퀸|vespiquen|bug/flying|꿀 모으기/탐색|꽃이 가득한 풍경
+059|깝질무|shellos|water|급수|길 안내 간판
+059|깝질무(동쪽바다)|shellos-east-sea|water|급수|길 안내 간판
+060|트리토돈|gastrodon|water/ground|급수/거래|바다낚시
+060|트리토돈(동쪽바다)|gastrodon-east-sea|water/ground|급수/거래|바다낚시
+061|흔들풍손|drifloon|ghost/flying|꿈섬|따뜻한 바람을 타고, 인형과 꿈나라로, 봉제 인형 천국
+062|둥실라이드|drifblim|ghost/flying|공중날기/분류|봉제 인형 천국
+063|두더류|drilbur|ground|탐색|신선한 채소밭
+064|몰드류|excadrill|ground/steel|탐색/절삭|신선한 채소밭
+065|으랏차|timburr|fighting|건축|바위 그늘의 풀숲
+066|토쇠골|gurdurr|fighting|건축|바위 그늘의 풀숲, 큰 짐을 싣고
+067|노보청|conkeldurr|fighting|건축/분쇄|공사 현장의 발전소
+068|불켜미|litwick|ghost/fire|점화|무덤과 공물, 기이한 무덤의 공물
+069|램프라|lampent|ghost/fire|점화|무덤과 공물, 기이한 무덤의 공물
+070|샹델라|chandelure|ghost/fire|점화|기이한 무덤의 공물
+071|터검니|axew|dragon|절삭|벌목 작업장
+072|액슨도|fraxure|dragon|절삭|벌목 작업장
+073|액스라이즈|haxorus|dragon|절삭/어지르기|벌목 작업장
+074|미끄메라|goomy|dragon|급수|나무 그늘의 꽃밭, 비바라기 스폿
+075|미끄네일|sliggoo|dragon|급수|촉촉한 풀숲
+076|미끄래곤|goodra|dragon|급수/거래|나무열매 총집합
+077|윽우지|cramorant|flying/water|공중날기/급수|촉촉한 풀숲
+078|피츄|pichu|electric|발전|피크닉 식탁
+079|창백카츄|peakychu|electric|발광|완치될 때까지 꿈나라로
+079|피카츄|pikachu|electric|발전|피크닉 식탁
+080|라이츄|raichu|electric|발전/분위기 메이킹|자연 속 마켓
+081|주뱃|zubat|poison/flying|탐색|나무 그늘의 노란 풀숲, 공원 벤치
+082|골뱃|golbat|poison/flying|탐색|나무 그늘의 노란 풀숲
+083|크로뱃|crobat|poison/flying|탐색/절삭|고지대의 노란 풀숲, 쓰레기장
+084|나옹|meowth|normal|거래|휴식 장소, 어서 오세요 계산대
+085|페르시온|persian|normal|거래/탐색|악의 조직 아지트
+086|고라파덕|psyduck|water|탐색|몸을 씻고 온천으로
+087|골덕|golduck|water|탐색|몸을 씻고 온천으로
+088|가디|growlithe|fire|점화/탐색|정리정돈 시간, 리조트에서 식사 준비
+089|윈디|arcanine|fire|점화/탐색|쁘띠 박물관, 마그마 낚시
+090|파오리|farfetchd|normal/flying|절삭/건축|짐 싸기 완료
+091|질퍼이|grimer|poison|어지르기|늪 낚시
+092|질뻐기|muk|poison|어지르기|늪 낚시
+093|고오스|gastly|ghost/poison|분류/거래|으스스한 서재
+094|고우스트|haunter|ghost/poison|분류/거래|함정 조심, 으스스한 서재
+095|팬텀|gengar|ghost/poison|분류/거래|함정 조심
+096|찌리리공|voltorb|electric|발전/폭발|공원 벤치, 해적놀이
+097|붐볼|electrode|electric|발전/폭발|공원 벤치, 해적놀이
+098|아라리|exeggcute|grass/psychic|재배/순간이동|트로피컬 느낌, 해변의 나무 그늘, 빨간 풀숲
+099|나시|exeggutor|grass/psychic|재배/순간이동|트로피컬 느낌, 해변의 나무 그늘
+100|핑복|happiny|normal|거래|알람 시계와 침대 공간, 어서 오세요 계산대
+101|럭키|chansey|normal|거래|완치될 때까지 꿈나라로
+102|해피너스|blissey|normal|거래/어지르기|너무 깜찍한 공간
+103|에레키드|elekid|electric|발전|자판기 세트
+104|에레브|electabuzz|electric|발전|수많은 쓰레기통, 라이트업 스테이지
+105|에레키블|electivire|electric|발전/분쇄|라이트업 스테이지, 자판기 세트
+106|라프라스|lapras|water/ice|급수|트로피컬 해변가
+107|먹고자|munchlax|normal|땅고르기|인형과 꿈나라로, 나무 그늘에서 푹 자는 잠만보
+108|이끼만보|mosslax|normal|먹보|맛있는 공물
+108|잠만보|snorlax|normal|거래/땅고르기|나무 그늘에서 푹 자는 잠만보, 예스러운 멋의 앤티크
+109|페이검|spinarak|bug/poison|어지르기|노란 풀숲
+110|아리아도스|ariados|bug/poison|어지르기|노란 풀숲
+111|메리프|mareep|electric|발전/어지르기|풀숲의 자판기, 털실로 뜨개질
+112|보송송|flaaffy|electric|발전/어지르기|밤의 축제 회장, 털실로 뜨개질
+113|전룡|ampharos|electric|발전/거래|내추럴한 생활
+114|루리리|azurill|normal/fairy|급수/분위기 메이킹|촉촉한 노란 풀숲, 정리정돈 시간
+115|마릴|marill|water/fairy|급수/분위기 메이킹|촉촉한 노란 풀숲, 선착장
+116|마릴리|azumarill|water/fairy|급수/건축|선착장
+117|팔데아우파|wooper-paldean|poison/ground|어지르기|늪지의 풀숲
+118|토오|clodsire|poison/ground|어지르기/땅고르기|늪지의 풀숲, 늪 낚시
+119|루브도|smeargle|normal|페인팅|작은 아틀리에
+120|아차모|torchic|fire|점화|짹짹 푸드, 리조트에서 식사 준비
+121|영치코|combusken|fire/fighting|점화/건축|리조트에서 식사 준비, 화력 발전소
+122|번치코|blaziken|fire/fighting|점화/건축|짹짹 푸드, 화력 발전소
+123|갈모매|wingull|water/flying|급수/공중날기|고지대의 노란 풀숲, 바람의 꽃밭
+124|패리퍼|pelipper|water/flying|급수/공중날기|고지대의 노란 풀숲, 바람의 꽃밭
+125|마크탕|makuhita|fighting|건축/땅고르기|나무 그늘의 노란 풀숲, 짐 싸기 완료
+126|하리뭉|hariyama|fighting|건축/땅고르기|나무 그늘의 노란 풀숲, 짐 싸기 완료
+127|앱솔|absol|dark|절삭|리조트에 어서 오세요
+128|팽도리|piplup|water|급수|촉촉한 노란 풀숲
+129|팽태자|prinplup|water|급수/거래|촉촉한 노란 풀숲, 수력 발전소
+130|엠페르트|empoleon|water/steel|급수/거래|요리 서빙, 수력 발전소
+131|다부니|audino|normal|거래|어서 오세요 계산대
+132|깨봉이|trubbish|poison|리사이클|쓰레기 집적소
+133|더스트나|garbodor|poison|리사이클/어지르기|쓰레기 집적소
+134|조로아|zorua|dark|거래|선선한 꽃밭
+135|조로아크|zoroark|dark|거래/절삭|선선한 꽃밭, 함정 조심
+136|치라미|minccino|normal|분류|피팅 공간, 치장 중에는 쳐다보기 금지
+137|치라치노|cinccino|normal|분류/리사이클|치장 중에는 쳐다보기 금지
+138|턱지충이|grubbin|bug|절삭|노란 풀숲, 자판기 옆에서 휴식
+139|전지충이|charjabug|bug/electric|발전/절삭|자판기 옆에서 휴식
+140|투구뿌논|vikavolt|bug/electric|발전/절삭|나무 그늘의 꽃밭
+141|따라큐|mimikyu|ghost/fairy|거래|피카츄 공간
+142|빠모|pawmi|electric|발전|선선한 꽃밭, 꼬르륵 레스토랑
+143|빠모트|pawmo|electric/fighting|발전/분쇄|꼬르륵 레스토랑, 카페 공간
+144|빠르모트|pawmot|electric/fighting|발전/분쇄|카페 공간
+145|싸리용(젖힌모습)|tatsugiri-curly|dragon/water|거래|해변 세트
+145|싸리용(늘어진모습)|tatsugiri-droopy|dragon/water|거래|해변 세트
+145|싸리용(쭉뻗은모습)|tatsugiri-stretchy|dragon/water|거래|해변 세트
+146|아보|ekans|poison|탐색|촉촉한 우아한 꽃밭
+147|아보크|arbok|poison|탐색|촉촉한 우아한 꽃밭
+148|삐|cleffa|fairy|분위기 메이킹|우아한 꽃밭
+149|삐삐|clefairy|fairy|분위기 메이킹|우아한 꽃밭, 동상 관광 스폿
+150|픽시|clefable|fairy|분위기 메이킹/거래|우아한 꽃밭, 동상 관광 스폿
+151|푸푸린|igglybuff|normal/fairy|분위기 메이킹|꽃밭의 그루터기 스테이지
+152|푸린|jigglypuff|normal/fairy|분위기 메이킹|꽃밭의 그루터기 스테이지, 리사이틀 스테이지
+153|푸크린|wigglytuff|normal/fairy|분위기 메이킹/거래|리사이틀 스테이지
+154|디그다|diglett|ground|분위기 메이킹|나무 그늘의 빨간 풀숲, 짐 보관소에서 몰래 꿀꺽
+155|닥트리오|dugtrio|ground|분위기 메이킹/분쇄|나무 그늘의 빨간 풀숲, 다 함께 파티
+156|알통몬|machop|fighting|건축/분류|바위 그늘의 풀숲
+157|근육몬|machoke|fighting|건축/분류|풀숲 트레이닝장, 리듬에 맞춰 원투
+158|괴력몬|machamp|fighting|건축/분류|풀숲 트레이닝장, 덜컹덜컹 철골 공사
+159|꼬마돌|geodude|rock/ground|분쇄|초록 풀숲
+160|데구리|graveler|rock/ground|분쇄|이끼투성이 바위
+161|딱구리|golem|rock/ground|분쇄/거래|이끼투성이 바위
+162|마그비|magby|fire|점화|예쁜 꽃밭
+163|마그마|magmar|fire|점화|땅 파고 태우고
+164|마그마번|magmortar|fire|점화/분쇄|미니 키친
+165|꼬지지|bonsly|rock|땅고르기|나무 그늘의 빨간 풀숲
+166|꼬지모|sudowoodo|rock|거래|나무 그늘의 빨간 풀숲, 다 함께 파티
+167|니로우|murkrow|dark/flying|거래/공중날기|고지대의 빨간 풀숲, 나무 그늘의 우아한 꽃밭
+168|돈크로우|honchkrow|dark/flying|거래/공중날기|지저귀는 리사이틀
+169|애버라스|larvitar|rock/ground|분쇄/땅고르기|이끼투성이
+170|데기라스|pupitar|rock/ground|분쇄/땅고르기|나무 그늘의 분홍 풀숲
+171|마기라스|tyranitar|rock/dark|분쇄/땅고르기|밭일로 땀이 뻘뻘, 이끼투성이
+172|연꽃몬|lotad|water/grass|급수|촉촉한 빨간 풀숲, 둥둥 웅덩이, 온천 낚시
+173|로토스|lombre|water/grass|급수|촉촉한 빨간 풀숲, 온천 낚시
+174|로파파|ludicolo|water/grass|급수/분위기 메이킹|둥둥 웅덩이
+175|입치트|mawile|steel/fairy|거래/건축|어서 오세요 계산대
+176|코터스|torkoal|fire|점화|이끼 낀 온천
+177|귀뚤뚜기|kricketot|bug|분위기 메이킹|빨간 풀숲, 음악과 잡지
+178|귀뚤톡크|kricketune|bug|분위기 메이킹|음악과 잡지
+179|페라페|chatot|normal/flying|분위기 메이킹/공중날기|고지대의 빨간 풀숲, 지저귀는 리사이틀
+180|리오르|riolu|fighting|건축|빨간 풀숲, 리듬에 맞춰 원투
+181|루카리오|lucario|fighting/steel|건축|리듬에 맞춰 원투
+182|스테레오로토무|rotom|electric/normal|DJ|음악과 잡지
+183|활화르바|larvesta|bug/fire|점화/어지르기|나무 그늘의 우아한 꽃밭
+184|불카모스|volcarona|bug/fire|점화/어지르기|나무 그늘의 우아한 꽃밭, 이글이글 마그마
+185|나몰빼미|rowlet|grass/flying|재배|신선한 채소밭
+186|빼미스로우|dartrix|grass/flying|재배/절삭|세모 나무 그늘의 바위와 풀숲
+187|모크나이퍼|decidueye|grass/ghost|재배/절삭|세모 나무 그늘의 바위와 풀숲, 모던 라이프
+188|염버니|scorbunny|fire|점화|빨간 풀숲
+189|래비풋|raboot|fire|점화|노천탕, 상쾌한 라커룸
+190|에이스번|cinderace|fire|점화/분위기 메이킹|빨간 풀숲, 상쾌한 라커룸
+191|탐리스|skwovet|normal|탐색/분위기 메이킹|나무 그늘의 풀숲
+192|요씽리스|greedent|normal|파티|셰프의 부엌
+193|탄동|rolycoly|rock|점화/분류|건널목
+194|탄차곤|carkol|rock/fire|점화/분류|건널목
+195|석탄산|coalossal|rock/fire|점화/분류|건널목, 묵직한 아이언
+196|일레즌|toxel|electric/poison|발전|느긋하게 사진을 돌아보며
+197|스트린더(하이한 모습)|toxtricity|electric/poison|발전/분위기 메이킹|하이한 록 스테이지
+197|스트린더(로우한 모습)|toxtricity-low-key|electric/poison|발전/분위기 메이킹|로우한 록 스테이지
+198|쫀도기|fidough|fairy|탐색|우아한 꽃밭, 와구와구 빵 공방
+199|바우첼|dachsbun|fairy|탐색/거래|우아한 꽃밭, 와구와구 빵 공방
+200|카르본|charcadet|fire|점화|이글이글 마그마
+201|카디나르마|armarouge|fire/psychic|점화/거래|중성의 기사 제단
+202|파라블레이즈|ceruledge|fire/ghost|점화/거래|원념의 기사 제단
+203|초롱순|glimmet|rock/poison|어지르기|기이한 하얀 바위, 짐 보관소에서 몰래 꿀꺽
+204|킬라플로르|glimmora|rock/poison|어지르기|기이한 하얀 바위, 짐 보관소에서 몰래 꿀꺽
+205|모으령|gimmighoul|ghost|컬렉터|쁘띠 박물관
+206|타부자고|gholdengo|steel/ghost|컬렉터|최고급 럭셔리
+207|식스테일|vulpix|fire|점화|폭신폭신 꽃밭
+208|나인테일|ninetales|fire|점화|폭신폭신 꽃밭, 아홉 개의 불꽃
+209|발챙이|poliwag|water|급수|청소를 뽀득뽀득
+210|슈륙챙이|poliwhirl|water|급수|촉촉한 폭신폭신 꽃밭
+211|강챙이|poliwrath|water/fighting|급수/건축|맨홀 점검 중, 도장에서 트레이닝
+212|왕구리|politoed|water|급수/분위기 메이킹|촉촉한 우아한 꽃밭, 꽃밭의 그루터기 스테이지, 힐링 온천
+213|캐이시|abra|psychic|순간이동|넘치는 사이코 파워, 수정 구슬 점
+214|윤겔라|kadabra|psychic|순간이동|수정 구슬 점
+215|후딘|alakazam|psychic|순간이동/거래|넘치는 사이코 파워, 실험 공간
+216|흉내내|mime-jr|psychic/fairy|분류|반짝반짝 세면장, 자유롭게 읽어 주세요
+217|마임맨|mr-mime|psychic/fairy|분류/건축|반짝반짝 세면장
+218|폴리곤|porygon|normal|리사이클|연구자의 데스크
+219|폴리곤2|porygon2|normal|리사이클|업무 데스크
+220|폴리곤Z|porygon-z|normal|레어 수집|게임코너에서 대전
+221|미뇽|dratini|dragon|급수|촉촉한 폭신폭신 꽃밭, 심플 욕실
+222|신뇽|dragonair|dragon|급수|촉촉한 폭신폭신 꽃밭, 심플 욕실
+223|망나뇽|dragonite|dragon/flying|급수/공중날기|물가의 작은 배
+224|브케인|cyndaquil|fire|점화|토관 비밀기지
+225|마그케인|quilava|fire|점화|토관 비밀기지, 벽난로 곁에서 꾸벅꾸벅
+226|블레이범|typhlosion|fire|점화/거래|벽난로 곁에서 꾸벅꾸벅, 팝 오브 팝
+227|무우마|misdreavus|ghost|거래|폭신폭신 꽃밭, 사무실 뒤편
+228|무우마직|mismagius|ghost|분류/거래|폭신폭신 꽃밭, 홈시어터, 사무실 뒤편
+229|키링키|girafarig|normal/psychic|분류|나무 그늘의 폭신폭신 꽃밭
+230|키키링|farigiraf|normal/psychic|분류/탐색|나무 그늘의 폭신폭신 꽃밭
+231|랄토스|ralts|psychic/fairy|순간이동|공부 공간
+232|킬리아|kirlia|psychic/fairy|순간이동|공부 공간, 촉촉한 화장대
+233|가디안|gardevoir|psychic/fairy|순간이동/거래|촉촉한 화장대, 쁘띠 도서관
+234|엘레이드|gallade|psychic/fighting|순간이동/건축|도장에서 트레이닝
+235|플러시|plusle|electric|발전|경치 좋은 포토존
+236|마이농|minun|electric|발전|경치 좋은 포토존
+237|톱치|trapinch|ground|땅고르기/어지르기|분홍 풀숲
+238|비브라바|vibrava|ground/dragon|땅고르기/공중날기|분홍 풀숲
+239|플라이곤|flygon|ground/dragon|땅고르기/공중날기|분홍 풀숲
+240|파비코|swablu|normal/flying|어지르기|분홍 풀숲
+241|파비코리|altaria|dragon/flying|어지르기/공중날기|지저귀는 가든
+242|해골몽|duskull|ghost|분류|분홍 풀숲
+243|미라몽|dusclops|ghost|분류|쓰레기장의 TV
+244|야느와르몽|dusknoir|ghost|분류/거래|쓰레기장의 TV
+245|메탕|beldum|steel/psychic|리사이클|사이클링 도중의 휴식
+246|메탕구|metang|steel/psychic|리사이클|박사를 목표로 연구 중
+247|메타그로스|metagross|steel/psychic|리사이클/분쇄|최고의 게임 환경
+248|주리비얀|snivy|grass|재배/어지르기|놀이 공간
+249|샤비|servine|grass|재배/어지르기|나무 그늘의 폭신폭신 꽃밭
+250|샤로다|serperior|grass|재배/어지르기|나무 그늘의 폭신폭신 꽃밭, 자유롭게 읽어 주세요
+251|개구마르|froakie|water|급수|촉촉한 분홍 풀숲
+252|개굴반장|frogadier|water|급수|촉촉한 분홍 풀숲, 장난 스위치
+253|개굴닌자|greninja|water/dark|급수/절삭|촉촉한 분홍 풀숲, 장난 스위치
+254|데덴네|dedenne|electric/fairy|탐색|타이어 놀이터
+255|음뱃|noibat|flying/dragon|탐색|리드미컬한 거실
+256|음번|noivern|flying/dragon|탐색/공중날기|리드미컬한 거실
+257|파라꼬|rookidee|flying|절삭|폭신폭신 꽃밭
+258|파크로우|corvisquire|flying|절삭|고지대의 분홍 풀숲
+259|아머까오|corviknight|flying/steel|절삭/공중날기|고지대의 분홍 풀숲, 맨홀 점검 중
+260|드라꼰|dreepy|dragon/ghost|분류/탐색|나무 그늘의 분홍 풀숲
+261|드래런치|drakloak|dragon/ghost|분류/탐색|나무 그늘의 분홍 풀숲, 사무실 뒤편
+262|드래펄트|dragapult|dragon/ghost|분류/거래|사무실 뒤편
+263|나오하|sprigatito|grass|재배|나무 그늘의 분홍 풀숲, 심문 데스크
+264|나로테|floragato|grass|재배|심문 데스크
+265|마스카나|meowscarada|grass/dark|재배/분위기 메이킹|두근두근 서프라이즈 박스
+266|찌리비|wattrel|electric/flying|발전|고지대의 분홍 풀숲
+267|찌리비크|kilowattrel|electric/flying|발전/공중날기|고지대의 분홍 풀숲
+268|어리짱|tinkatink|fairy/steel|건축|큰 짐을 싣고, 대형 불법 투기장, 맨홀 점검 중
+269|벼리짱|tinkatuff|fairy/steel|건축|큰 짐을 싣고
+270|두드리짱|tinkaton|fairy/steel|장인|대형 불법 투기장
+271|프테라|aerodactyl|rock/flying|공중날기|날개의 화석 전시대
+272|두개도스|cranidos|rock|분쇄|두개의화석 전시대
+273|램펄드|rampardos|rock|분쇄/어지르기|박치기화석 전시대
+274|방패톱스|shieldon|rock/steel|분쇄|방패의화석 전시대
+275|바리톱스|bastiodon|rock/steel|분쇄/어지르기|실드화석 전시대
+276|티고라스|tyrunt|rock/dragon|분쇄|턱화석 전시대
+277|견고라스|tyrantrum|rock/dragon|분쇄/어지르기|폭군화석 전시대
+278|아마루스|amaura|rock/ice|분쇄|지느러미화석 전시대
+279|아마루르가|aurorus|rock/ice|분쇄/어지르기|툰드라화석 전시대
+280|이브이|eevee|normal|거래|예쁜 꽃밭
+281|샤미드|vaporeon|water|급수|팝핑 블루
+282|쥬피썬더|jolteon|electric|발전|짜릿한 감자튀김
+283|부스터|flareon|fire|점화|불탈 만큼 매콤한 맛
+284|에브이|espeon|psychic|분류|엘레강트한 오후
+285|블래키|umbreon|dark|탐색|다크한 맛
+286|리피아|leafeon|grass|재배|채소 듬뿍 샌드위치
+287|글레이시아|glaceon|ice|거래|시원한 빙수
+288|님피아|sylveon|fairy|분위기 메이킹|러블리한 케이크
+289|가이오가|kyogre|water||
+290|라이코|raikou|electric|발전|
+291|앤테이|entei|fire|점화|
+292|스이쿤|suicune|water|급수|
+293|볼케니온|volcanion|fire/water|점화|
+294|프리져|articuno|ice/flying|공중날기|
+295|썬더|zapdos|electric/flying|공중날기|
+296|파이어|moltres|fire/flying|공중날기|
+297|루기아|lugia|psychic/flying||
+298|칠색조|ho-oh|fire/flying||
+299|뮤츠|mewtwo|psychic|순간이동|
+300|뮤|mew|psychic|순간이동|
+#이벤트
+001|통통코|hoppip|grass/flying|재배|노란 융단
+002|두코|skiploom|grass/flying|재배|노란 융단, 소풍 친구들
+003|솜솜코|jumpluff|grass/flying|재배/어지르기|노란 융단, 민들레 점심시간
+004|깜까미|sableye|dark/ghost|탐색|보물찾기 세트
+005|지라치|jirachi|steel/psychic|어지르기|별에 둘러싸여
